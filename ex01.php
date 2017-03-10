@@ -10,5 +10,5 @@ $num = 15;
             echo "Tu numero es menor que 30 <br>";
         
         }
-
+        
 
