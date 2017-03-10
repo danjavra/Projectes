@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registrate!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <form action="formulario01.php" autocomplete="on" method="get">
+             <div style=" margin-left: 425px;">
+              <img style="display:inline-block;" src="wewantyou.jpg" alt="Registrate!" title="We Want You" height="250px" width="300px"/>
+           
+             
+              <h1 style="display:inline-block">¡Registrate en la web!</h1>
+             </div>    
+             <div style="background-color: lightsteelblue; margin-left: 500px; margin-right: 450px; height:150px; padding-top: 20px; padding-left: 20px; color:red;" >
+               
+                 Usuario:<input required="" maxlength="10" pattern=".{2,10}" style="margin-left: 10px; " type="text" name="fname" placeholder="Nombre"> 
+                 Email:<input required="" style="margin-left: 94px;" type="email" name="email" placeholder="E-mail"><br/>
+                 Password:<input required="" type="password" name="fpassword" placeholder="Introcudir Password">
+                 Confirmar Password:<input required="" type="password" name="fpassword2" placeholder="Confirmar Password"><br />
+               <br/>
+   Transporte mas utilizado:
+   <input required style="margin-left: 20px;" type="radio" name="transport" value="coche">coche<input style="margin-left: 20px;" type="radio" name="transport" value="tren">tren<input style="margin-left: 20px;" type="radio" name="transport" value="moto">moto<br/>
+
+    <input style="margin-left: 230px; margin-top: 10px;" type="submit" value="Registrate"/>
+   <input  type="reset" value="limpia el formulario"><br/>
+  
+             </div>
+ 
+ </form>
+    </body>
+</html>
