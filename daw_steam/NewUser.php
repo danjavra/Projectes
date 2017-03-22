@@ -12,7 +12,7 @@
             <input type="submit" value="registrarse" name="alta">
         </form>
         <?php
-        require_once 'bbdd_steam.php';
+        require_once 'bbdduser.php';
         //Si han pulsado el botón registramos el usuario
         if(isset($_POST["alta"])){
             //recogemos el nombre de usuario

@@ -8,6 +8,7 @@
         <br/>
             <a href="NewUser.php">Nuevo Usuario</a>
         <br/>
+            <a href="ModificarPerfil.php">Modificar Perfil</a>
  <?php
         // put your code here
         ?>
