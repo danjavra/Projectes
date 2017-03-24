@@ -72,9 +72,7 @@ and open the template in the editor.
                             infowindow.setContent(marker.data);     //dins la finestra mostrem el atribut data de la marca
                             infowindow.open(map, marker);
                         })
-                        .then(function (markers) {
-                            markers[1].setIcon('http://maps.google.com/mapfiles/marker_orange.png');
-                        })
+                       
                         .fit();
             }
 
