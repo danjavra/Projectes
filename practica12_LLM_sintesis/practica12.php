@@ -17,15 +17,17 @@ and open the template in the editor.
         <link href="practica12css.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+     <div id="main">
          <div id="slider1" class="your-class">
             
-              <div class="cont"><img src="Berlin Treptower Park lake.jpg" alt=""/></div>
-              <div  class="cont"><img src="Brussels 2.jpg" alt=""/></div>
-              <div  class="cont"><img src="DSC06184R2.jpg" alt=""/></div>
-              <div  class="cont"><img src="DSC09229R2.jpg" alt=""/></div>
+             <div class="cont"><img src="Ifrit.jpg" alt=""/></div>
+             <div  class="cont"><img src="titan.jpg" alt=""/></div>
+             <div  class="cont"><img src="godzilla.jpg" alt=""/></div>
+             <div  class="cont"><img src="kong.jpg" alt=""/></div>
               
               
         </div>
+     </div>
         <?php
         // put your code here
         ?>
