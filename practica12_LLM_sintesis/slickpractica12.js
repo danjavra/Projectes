@@ -60,7 +60,7 @@ $("#formulario").validate({
       },
       edad1:{
          required:true,
-         range:[0,17]
+         range:[18,99]
       },
       personaje1:{
           required:true
@@ -72,7 +72,7 @@ $("#formulario").validate({
       },
       edad2:{
          required:true,
-         range:[0,17]
+         range:[18,99]
       },
       personaje2:{
           required:true
@@ -86,7 +86,7 @@ $("#formulario").validate({
          },
        edad1:{
        required:"requerido",
-       range:"0-17"
+       range:"18-99"
        },
        personaje1:{
        personaje:"requerido"
@@ -98,7 +98,7 @@ $("#formulario").validate({
        },
        edad2:{
        required:"requerido",
-       range:"0-17"
+       range:"18-99"
        },
        personaje2:{
        required:"requerido"

@@ -37,7 +37,7 @@ and open the template in the editor.
                     <span class="text1">Direccion:</span><input class="Direccion" name="direccion1" id="direccion" placeholder="Direccion" ><br>
                     <span class="text2">(entre 5 y 20 letras)</span><br>
                     <span class="text1">edad:<input  class="edad" id="edad" name="edad1" ></span><br>
-                    <span class="text2">(entre 0 y 17 años)</span><br>
+                    <span class="text2">(entre 18 y 99 años)</span><br>
                     <span class="text1">Personaje:
                         <select id="personaje1" class="personaje" name="personaje1" >
                             <option></option>
@@ -53,7 +53,7 @@ and open the template in the editor.
                     <span class="text1">Direccion:</span><input class="Direccion" name="direccion2" id="direccion" placeholder="Direccion"><br>
                     <span class="text2">(entre 5 y 20 letras)</span><br>
                     <span class="text1">edad:<input class="edad" id="edad" name="edad2"></span><br>
-                    <span class="text2">(entre 0 y 17 años)</span><br>
+                    <span class="text2">(entre 18 y 99 años)</span><br>
                     <span class="text1">Personaje:
                         <select id="personaje2" name="personaje2"  class="personaje" >
                             <option></option>
