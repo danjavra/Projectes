@@ -24,9 +24,54 @@ and open the template in the editor.
              <div  class="cont"><img src="titan.jpg" alt=""/></div>
              <div  class="cont"><img src="godzilla.jpg" alt=""/></div>
              <div  class="cont"><img src="kong.jpg" alt=""/></div>
-              
-              
-        </div>
+   
+         </div>
+         <div class="player1" id="player1">
+                <p>Player1</p>
+            </div>
+            <div class="player2" id="player2">
+                <p>Player2</p>
+            </div>
+            <form action="resultado.php" method="POST" id="formulario">
+                <div class="FormularioPlayer1">
+                    <span class="text1">Direccion:</span><input class="Direccion" name="direccion1" id="direccion" placeholder="Direccion" ><br>
+                    <span class="text2">(entre 5 y 20 letras)</span><br>
+                    <span class="text1">edad:<input  class="edad" id="edad" name="edad1" ></span><br>
+                    <span class="text2">(entre 0 y 17 años)</span><br>
+                    <span class="text1">Personaje:
+                        <select id="personaje1" class="personaje" name="personaje1" >
+                            <option></option>
+                            <option value="Ifrit">Ifrit</option>
+                            <option value="titan">Titan</option>
+                            <option value="godzilla">Godzilla</option>
+                            <option value="kong">Kong</option>
+                        </select>
+                    </span>
+           
+                </div>
+                <div class="FormularioPlayer2">
+                    <span class="text1">Direccion:</span><input class="Direccion" name="direccion2" id="direccion" placeholder="Direccion"><br>
+                    <span class="text2">(entre 5 y 20 letras)</span><br>
+                    <span class="text1">edad:<input class="edad" id="edad" name="edad2"></span><br>
+                    <span class="text2">(entre 0 y 17 años)</span><br>
+                    <span class="text1">Personaje:
+                        <select id="personaje2" name="personaje2"  class="personaje" >
+                            <option></option>
+                            <option value="Ifrit">Ifrit</option>
+                            <option value="titan">Titan</option>
+                            <option value="godzilla">Godzilla</option>
+                            <option value="kong">Kong</option>
+                        </select>
+                    </span>
+                </div>
+                 <div class="Ply1Heroes">
+                    <img src="" id="imagenselecionado1">
+                </div>
+                <div class="Ply2Heroes">
+                    <img src="" id="imagenselecionado2">
+                </div>
+                <input type="submit" name="Fight" value="Fight" class="fight">
+            </form>
      </div>
         <?php
         // put your code here
