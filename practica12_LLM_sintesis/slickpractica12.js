@@ -5,10 +5,10 @@ $(document).ready(function(){
     dots: true,
     accessibility: true,
     adaptiveHeight: true,
-   infinite: true,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-   responsive: [
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
     {
       breakpoint: 700,
       settings: {
@@ -108,32 +108,34 @@ $("#formulario").validate({
    },
    messages:{
        direccion1:{
-       required:"requerido",
+       required:"<b>Obligatorio</b>",
        minlength:"minimo 5 letras",
        maxlength:"maximo 20 letras"
          },
        edad1:{
-       required:"requerido",
+       required:"<b>Obligatorio</b>",
        range:"18-99"
        },
        personaje1:{
-       personaje:"requerido"
+       personaje:"<b>Obligatorio</b>"
        },
        direccion2:{
-        required:"<b>requerido",
+        required:"<b>Obligatorio</b>",
        minlength:"minimo 5 letras",
        maxlength:"maximo 20 letras"   
        },
        edad2:{
-       required:"requerido",
+       required:"<b>Obligatorio</b>",
        range:"18-99"
        },
        personaje2:{
-       required:"requerido"
+       required:"<b>Obligatorio</b>"
        }
    }
-   
-});
 
 });
+   $("#formulario").valid();
 
+
+
+});

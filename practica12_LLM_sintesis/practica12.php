@@ -35,12 +35,12 @@ and open the template in the editor.
             </div>
             <form action="resultado.php" method="POST" id="formulario">
                 <div class="FormularioPlayer1">
-                    <span class="text1">Direccion:</span><input class="Direccion" name="direccion1" id="direccion" placeholder="Direccion" ><br>
+                    <span class="text1">Direccion:</span><input required class="Direccion" name="direccion1" id="direccion" placeholder="Direccion" ><br>
                     <span class="text2">(entre 5 y 20 letras)</span><br>
-                    <span class="text1">edad:<input  class="edad" id="edad" name="edad1" ></span><br>
+                    <span class="text1">edad:<input required class="edad" id="edad" name="edad1" ></span><br>
                     <span class="text2">(entre 18 y 99 años)</span><br>
                     <span class="text1">Personaje:
-                        <select id="personaje1" class="personaje" name="personaje1" >
+                        <select required id="personaje1" class="personaje" name="personaje1" >
                             <option></option>
                             <option value="Ifrit">Ifrit</option>
                             <option value="titan">Titan</option>
@@ -54,12 +54,12 @@ and open the template in the editor.
                 </div>
                 
                 <div class="FormularioPlayer2">
-                    <span class="text1">Direccion:</span><input class="Direccion" name="direccion2" id="direccion" placeholder="Direccion"><br>
+                    <span class="text1">Direccion:</span><input required class="Direccion" name="direccion2" id="direccion" placeholder="Direccion"><br>
                     <span class="text2">(entre 5 y 20 letras)</span><br>
-                    <span class="text1">edad:<input class="edad" id="edad" name="edad2"></span><br>
+                    <span class="text1">edad:<input required class="edad" id="edad" name="edad2"></span><br>
                     <span class="text2">(entre 18 y 99 años)</span><br>
                     <span class="text1">Personaje:
-                        <select id="personaje2" name="personaje2"  class="personaje" >
+                        <select required id="personaje2" name="personaje2"  class="personaje" >
                             <option></option>
                             <option value="Ifrit">Ifrit</option>
                             <option value="titan">Titan</option>
