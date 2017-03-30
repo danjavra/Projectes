@@ -14,7 +14,8 @@ and open the template in the editor.
         <script src="gmap3.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1 style="text-align: center;">Mapa con datos del ganador y musica</h1>
+        <div style=" height: 80vh; width: 55%; background-color:black; margin-left:25%; border:dashed 3px yellow; ">
+        <h1 style="text-align:center; color:crimson;">Localización del ganador y su musica</h1>
         <?php
         $winner = rand(1,2);
             $direccion1 = $_POST['direccion2'];
@@ -67,7 +68,7 @@ and open the template in the editor.
             function init() {
                 $('#mapa2')
                         .gmap3({
-                           zoom:1
+                           zoom:10
                         })
                         .infowindow({content: "contentString"})
                         .marker([
@@ -88,6 +89,6 @@ and open the template in the editor.
 
 
         </script>
-        
+        </div>
     </body>
 </html>
