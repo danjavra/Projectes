@@ -41,8 +41,12 @@ primerSelect.on('change', cambiaImagen1);
 function cambiaImagen1(){
     
     var currentValue1 = $(this).val();
-    
+   
+    contenedor1.hide();
     imageselecionado1.attr("src", currentValue1+".jpg");
+    contenedor1.animate({"left":"-800px"});
+    contenedor1.fadeIn(100);
+    setTimeout(transicion1, 100);
     
 }
 
@@ -54,7 +58,22 @@ segundoSelect.on('change',cambiaImagen2);
 function cambiaImagen2(){
     var currentValue2 = $(this).val();
     
+    contenedor2.hide();
     imageselecionado2.attr("src", currentValue2+".jpg");
+    contenedor2.animate({"right":"-800px"}); 
+    contenedor2.fadeIn(100);
+    setTimeout(transicion2, 100);
+}
+
+var contenedor1 = $('.Ply1Heroes'),
+    contenedor2 = $('.Ply2Heroes');
+
+function transicion1(){
+    
+    contenedor1.animate({"left":"0"});
+}
+function transicion2(){
+    contenedor2.animate({"right":"0"});
 }
 
 
@@ -115,4 +134,6 @@ $("#formulario").validate({
    }
    
 });
+
 });
+

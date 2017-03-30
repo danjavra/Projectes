@@ -48,8 +48,11 @@ and open the template in the editor.
                             <option value="kong">Kong</option>
                         </select>
                     </span>
-           
+                    <div class="Ply1Heroes">
+                    <img src="" id="imagenselecionado1">
+                    </div>
                 </div>
+                
                 <div class="FormularioPlayer2">
                     <span class="text1">Direccion:</span><input class="Direccion" name="direccion2" id="direccion" placeholder="Direccion"><br>
                     <span class="text2">(entre 5 y 20 letras)</span><br>
@@ -64,13 +67,12 @@ and open the template in the editor.
                             <option value="kong">Kong</option>
                         </select>
                     </span>
-                </div>
-                 <div class="Ply1Heroes">
-                    <img src="" id="imagenselecionado1">
-                </div>
-                <div class="Ply2Heroes">
-                    <img src="" id="imagenselecionado2">
-                </div>
+
+                    <div class="Ply2Heroes">
+                       <img src="" id="imagenselecionado2">
+                    </div>
+                
+                 </div>
                 <input type="submit" name="Fight" value="Fight" class="fight">
             </form>
      </div>
