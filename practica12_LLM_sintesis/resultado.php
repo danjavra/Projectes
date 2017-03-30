@@ -68,7 +68,7 @@ and open the template in the editor.
             function init() {
                 $('#mapa2')
                         .gmap3({
-                           zoom:10
+                           zoom:4
                         })
                         .infowindow({content: "contentString"})
                         .marker([

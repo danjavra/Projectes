@@ -18,6 +18,7 @@ and open the template in the editor.
     </head>
     <body>
      <div id="main">
+         <h1>Monster Wars</h1>
          <div id="slider1" class="your-class">
             
              <div class="cont"><img src="Ifrit.jpg" alt=""/></div>
