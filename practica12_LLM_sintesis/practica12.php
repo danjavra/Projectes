@@ -15,6 +15,8 @@ and open the template in the editor.
         <link href="slick-1.6.0/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
         <script src="slickpractica12.js" type="text/javascript"></script>
         <link href="practica12css.css" rel="stylesheet" type="text/css"/>
+        <script src="additional-methods.min.js" type="text/javascript"></script>
+        <script src="jquery.validate.min.js" type="text/javascript"></script>
     </head>
     <body>
      <div id="main">

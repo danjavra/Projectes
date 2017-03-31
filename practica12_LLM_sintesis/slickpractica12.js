@@ -78,7 +78,6 @@ function transicion2(){
 
 
 $("#formulario").validate({
-   focusCleanup: true,
    rules:{
       direccion1:{
           required:true,
