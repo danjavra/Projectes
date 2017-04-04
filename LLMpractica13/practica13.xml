@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--ex.1-->
+<micasa>
+  <habitacion id='comedor'>
+     <funcion>comedor</funcion>
+     <nombre>comedor</nombre>
+     <mueble>mesa</mueble>
+     <mueble>sofá</mueble>
+     <puerta a='escalera' />
+  </habitacion>
+  <habitacion id='lavabo'>
+     <funcion>lavabo</funcion>
+     <nombre>lavabo</nombre>
+     <mueble>bañera</mueble>
+     <mueble>espejo</mueble>
+     <puerta a='comedor' />
+  </habitacion>
+  <habitacion id='cocina'>
+     <funcion>cocina</funcion>
+     <nombre>cocina</nombre>
+     <mueble>estanterias</mueble>
+     <mueble>fogones</mueble>
+     <puerta a='comedor' /> 
+  </habitacion>
+</micasa>
+
+<!--ex.2-->
+<contacto>
+    <inf_basica> 
+      <nombre>Manolo</nombre>
+      <apellido1>Garcia</apellido1>
+      <apellido2>Sanchez</apellido2>
+      <edad>25</edad>
+    </inf_basica>
+    <dirreccion>
+        <calle>Tallers</calle>
+        <num_calle>50</num_calle>
+        <num_piso>3</num_piso>
+        
+    </dirreccion>
+    
+     
+</contacto>

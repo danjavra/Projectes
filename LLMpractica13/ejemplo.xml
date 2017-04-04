@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Info sobre un juego.
+Nombre, num jugadores, empresa, reviews(autir, puntuacion, texto)
+-->
+
+
+<juego>
+    <nombre>Legend of Zelda</nombre>
+    <num_jugadores>1</num_jugadores>
+    <desarrollador>Nintendo</desarrollador>
+    <reviews>
+        <review numero="1">
+            <autor>Pepe</autor>
+            <puntuacion>9</puntuacion>
+            <texto>Como mola!</texto>
+        </review>
+        <review numero="1">
+            <autor>Maria</autor>
+            <puntuacion>10</puntuacion>
+            <texto>Como mola!!!!</texto>
+        </review>
+    </reviews>
+</juego>
