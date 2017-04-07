@@ -33,12 +33,68 @@
       <apellido2>Sanchez</apellido2>
       <edad>25</edad>
     </inf_basica>
-    <dirreccion>
+    <direccion>
         <calle>Tallers</calle>
         <num_calle>50</num_calle>
         <num_piso>3</num_piso>
-        
-    </dirreccion>
-    
-     
+        <codigo_postal>08002</codigo_postal>
+        <ciudad>Barcelona</ciudad>  
+    </direccion>
+    <medios_contacto>
+        <telf_fijo>935485297</telf_fijo>
+        <telf_movil>652888999</telf_movil>
+        <email>man_o_lolo@hotmail.com</email>
+    </medios_contacto>
 </contacto>
+
+<!--ex.3-->
+<libreta_direcciones>
+    <contactos>
+        <contacto id="familiar">
+            <nombre>Maria</nombre>
+            <direccion class="principal">
+                <calle>Valencia</calle>
+                <num_calle>150</num_calle>
+                <num_piso>5</num_piso>
+                <codigo_postal>08012</codigo_postal>
+                <ciudad>Barcelona</ciudad>  
+            </direccion>
+        </contacto>
+        <contacto id="compañero_clase">
+            <nombre>Julio</nombre>
+            <direccion>
+                <calle>Sepulveda</calle>
+                <num_calle>34</num_calle>
+                <num_piso>4</num_piso>
+                <codigo_postal>08015</codigo_postal>
+                <ciudad>Barcelona</ciudad>  
+            </direccion>
+        </contacto>
+        <contacto id="familiar">
+            <nombre>Julieta</nombre>
+            <direccion>
+                <calle>Aragón</calle>
+                <num_calle>232</num_calle>
+                <num_piso>6</num_piso>
+                <codigo_postal>08030</codigo_postal>
+                <ciudad>Barcelona</ciudad>  
+            </direccion>
+        </contacto>
+    </contactos>
+</libreta_direcciones>
+
+<!--ex.4-->
+<grupos>
+    <grupo id="Andromeda" genero="metal">
+         <nombre>Andromeda</nombre>
+         <web>http://andromedazone.com</web>
+         <integrantes>6</integrantes>
+         
+         
+    </grupo>
+    <grupo genero="jazz">
+        <nombre>BlueSky</nombre>
+        <web>http://dba.com</web>
+         <integrantes>3</integrantes>
+    </grupo>     
+</grupos>

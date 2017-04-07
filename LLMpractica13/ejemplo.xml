@@ -15,10 +15,24 @@ Nombre, num jugadores, empresa, reviews(autir, puntuacion, texto)
             <puntuacion>9</puntuacion>
             <texto>Como mola!</texto>
         </review>
-        <review numero="1">
+        <review numero="2">
             <autor>Maria</autor>
             <puntuacion>10</puntuacion>
             <texto>Como mola!!!!</texto>
         </review>
     </reviews>
 </juego>
+
+<grupos>
+    <grupo id="Molon" genero="jazz">
+         <nombre>Molon</nombre>
+         <web>http://dfa.com</web>
+         <integrantes>3</integrantes>
+         
+    </grupo>
+    <grupo genero="jazz">
+        <nombre>BlueSky</nombre>
+        <web>http://dba.com</web>
+         <integrantes>3</integrantes>
+    </grupo>     
+</grupos>
