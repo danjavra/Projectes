@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sms SYSTEM "ejemplodtd.dtd">
+<sms lenght="19">
+     <to>Pedro</to>
+     <to>Pedro</to>
+     <from>Maria</from>
+     <adjunto numero="9">
+         <imagen>
+             img.jpg
+         </imagen>
+     </adjunto>
+ </sms>

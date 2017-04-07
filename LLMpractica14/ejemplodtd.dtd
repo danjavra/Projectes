@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT sms (to*,from,adjunto)>
+<!ATTLIST sms lenght CDATA #REQUIRED>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT adjunto (imagen*)>
+<!ELEMENT imagen (#PCDATA)>
+
+
