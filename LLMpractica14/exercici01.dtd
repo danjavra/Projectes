@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT juego (nombre,ubicacion,equipo*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)>
+<!ELEMENT equipo (nombre,director?,jugadores)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT jugadores (jugador*)>
+<!ELEMENT jugador (nombre,apellido*,cantidad?,funcion,fSecundaria*)>
+<!ATTLIST jugador edad CDATA #IMPLIED>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT funcion (#PCDATA)>
+<!ELEMENT fSecundaria (#PCDATA)>
+
+<!--
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/__NAME__
+-->
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+<!ELEMENT __ROOT__ ANY>
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+

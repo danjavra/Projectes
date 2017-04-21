@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE juego SYSTEM "exercici01.dtd">
+<juego>
+<nombre>Run to Mordor</nombre>
+<ubicacion>Tierra Media</ubicacion>
+<equipo>
+	<nombre>La comunidad del anillo</nombre>
+<director>Gandalf</director>
+<jugadores>
+<jugador>
+		<nombre>Bilbo</nombre>
+	<apellido>Bolsón</apellido>
+	<funcion>andar</funcion>
+	<fSecundaria>tirar anillo</fSecundaria>
+</jugador>
+<jugador>
+		<nombre> Samsagaz </nombre>
+	<apellido>Gamyi</apellido>
+	<funcion>cuidar de Bilbo</funcion>
+</jugador>
+</jugadores>
+</equipo>
+<equipo>
+	<nombre>Malotes</nombre>
+	<director>Sauron</director>
+	<jugadores>
+		<jugador>
+			<nombre>Orco</nombre>
+			<cantidad>1000</cantidad>
+			<funcion>perseguir</funcion>
+		</jugador>
+	</jugadores>
+</equipo>
+</juego>
+
+
