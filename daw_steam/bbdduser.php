@@ -13,17 +13,25 @@ function getTipoUsuario($username){
     return $type;
 }
 //Función que verifica los datos de un user
-function verificarUser($username, $password){
+function verificarUser($username, $pass){
     $con = conectar("daw_steam");
-    $query = "select * from user where username='$username' and password='$password'";
+    $query = "select * from user where username='$username'";
     $resultado = mysqli_query($con, $query);
     $filas = mysqli_num_rows($resultado);
     desconectar($con);
     if ($filas > 0){
+        // Comprobamos que la contraseña es correcta
+        $fila = mysqli_fetch_array($resultado);
+        extract($fila);
+        /* if(password_verify($pass,$password)){
         return true;
     }else{
         return false;
-    }
+    } */
+    return password_verify($pass,$password);
+}else{ //este else no hace falta
+    return false;
+}
 }
 // Función que inserta un usuario de tipo usuario
 
