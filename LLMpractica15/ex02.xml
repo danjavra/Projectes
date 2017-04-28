@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<coche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="ex02_XSD.xsd">
+
+    <matricula>2222BB</matricula>
+    <color>verde</color>
+    <model year="2012">206xti</model>
+    
+    
+</coche>

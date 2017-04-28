@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="exempleXSD.xsd" fecha="1970-03-27">
+
+    <to amigo="si"> Pedro </to>
+    <from>Maria</from>
+    <texto>Entregar prácticas</texto>
+    
+</sms> 
+<root>
+    
+</root>
