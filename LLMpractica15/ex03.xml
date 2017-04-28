@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<coches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="coches.xsd">
+  <coche tipo="berlina">
+    <matricula >90394039C</matricula>
+    <color>rojo</color>
+    <modelo year="2010"> Fiesta</modelo>
+  </coche>
+  <coche tipo="todoterreno"> 
+    <matricula >9034930C</matricula>
+    <color>rojo</color>
+    <modelo year="1900">Niva</modelo>
+  </coche>
+</coches>
