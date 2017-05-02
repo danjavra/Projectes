@@ -7,10 +7,10 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Royal</title>
+        <title>Stucom Mail</title>
     </head>
     <body>
-            <h1>Battle Royal</h1>
+            <h1>Stucom Mail</h1>
         <br/>
             <a href="registro.php">Registro</a>
         <br/>
