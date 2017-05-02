@@ -11,24 +11,28 @@ and open the template in the editor.
     <xs:element name="coches">
         <xs:complexType  mixed="false">
             <xs:sequence>
-                <xs:element name="coche">
-                    /*complex*/
-                    
-                <xs:element name="matricula" type="xs:string"/>
-                <xs:element name="color" >
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="rojo"/>
-                            <xs:enumeration value="amarillo"/>
-                            <xs:enumeration value="verde"/>
-                            <xs:enumeration value="negro"/>
-                            <xs:enumeration value="blanco"/>
-                        </xs:restriction>
-                    </xs:simpleType> 
-                </xs:element>
-                <xs:element name="model"> 
+                <xs:element name="coche" minOccurs="0" maxOccurs="unbounded">
                     <xs:complexType  mixed="true">
-                        <xs:attribute name="year"  use="required"/>
+                        <xs:sequence>
+                            <xs:element name="matricula" type="xs:string"/>
+                            <xs:element name="color" >
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="rojo"/>
+                                        <xs:enumeration value="amarillo"/>
+                                        <xs:enumeration value="verde"/>
+                                        <xs:enumeration value="negro"/>
+                                        <xs:enumeration value="blanco"/>
+                                    </xs:restriction>
+                                </xs:simpleType> 
+                            </xs:element>
+                            <xs:element name="modelo"> 
+                                <xs:complexType  mixed="true">
+                                    <xs:attribute name="year"  use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="tipo"  type="xs:string" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
