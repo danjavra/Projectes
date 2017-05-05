@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="sms.xsd">
+ 
+  <mensaje>  
+    <from telf="669335522">Maria</from>
+    <to telf="668877554">Pedro</to>
+    <to telf="678994551">Juan</to>
+    <longitud>100</longitud>
+    <fecha>05-05-2017</fecha>
+  </mensaje>
+  
+</sms>
