@@ -10,8 +10,17 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+           <h1>Registrar Usuarios</h1>
         <?php
-        // put your code here
+        session_start();
+        //Nos aseguramos de que haya un usuario autentificado
+        if(isset($_SESSION["user"])){
+        // cogemos la variable de sesión y saludamos al usuario
+        $username = $_SESSION["user"];
+        echo"¡Hola $username!";
+        }else{
+            echo"No estás autentificado.";
+        }
         ?>
     </body>
 </html>
