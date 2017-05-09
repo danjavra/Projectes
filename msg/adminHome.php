@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-         <h1>Menú de Usuario</h1>
+         <h1>Menú del Administrador</h1>
         <?php
         session_start();
         //Nos aseguramos de que haya un usuario autentificado
