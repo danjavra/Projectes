@@ -10,9 +10,28 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <h1>Hola</h1>
+        <h1>Menú de Usuario</h1>
         <?php
-        
+        session_start();
+        //Nos aseguramos de que haya un usuario autentificado
+        if(isset($_SESSION["user"])){
+        // cogemos la variable de sesión y saludamos al usuario
+        $username = $_SESSION["user"];
+        echo"¡Hola $username!";
+        }else{
+            echo"No estás autentificado.";
+        }
         ?>
+        <br><br/>
+           <a href="modpassword.php">Modificar password</a>
+         <br/>
+           <a href="enviar_msg.php">Enviar un mensaje</a>
+         <br/>
+           <a href="bandeja_entrada.php">Bandeja de entrada</a>
+         <br/>
+           <a href="enviados.php">Mensajes enviados</a>  
+        <br></br>
+        <a href="msg.php">Inicio</a>
+        
     </body>
 </html>
