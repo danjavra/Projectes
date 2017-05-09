@@ -11,7 +11,7 @@
             <input type="submit" name="login" value="Login">
         </form>
         <?php
-        require_once 'bbdduser.php';
+        require_once 'bbdd_login.php';
         
         if(isset($_POST["login"])){
             //Recogemos los datos del login

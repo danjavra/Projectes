@@ -13,14 +13,16 @@ function getTipoUsuario($username){
     return $type;
 }
 //Función que verifica los datos de un user
-function verificarUser($username, $password){
+function verificarUser($username, $pass){
     $con = conectar("msg");
-    $query = "select * from user where username='$username' and password='$password'";
+    $query = "select password from user where username='$username'";
     $resultado = mysqli_query($con, $query);
     $filas = mysqli_num_rows($resultado);
     desconectar($con);
     if ($filas > 0){
-        return true;
+        $fila = mysqli_fetch_array($resultado);
+        extract($fila);
+        return password_verify($pass,$password);
     }else{
         return false;
     }
