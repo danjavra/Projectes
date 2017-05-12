@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+<xs:element name="contactos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="contacto" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="apellido1" type="xs:string"/>
+                            <xs:element name="apellido2" type="xs:string"/>
+                            <xs:element name="edad" >
+                             <xs:simpleType>
+                                 <xs:restriction base="xs:integer">
+                                     <xs:minInclusive value="0"/>
+                                     <xs:maxInclusive value="150"/>
+                                 </xs:restriction>    
+                             </xs:simpleType>    
+                            </xs:element>   
+                            <xs:element name="direccion" minOccurs="0" maxOccurs="unbounded">    
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tipo_via">
+                                            <xs:complexType mixed="true">
+                                                <xs:attribute name="tipo">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="calle"/>
+                                                            <xs:enumeration value="plaza"/>
+                                                            <xs:enumeration value="carretera"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Piso" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="puerta" minOccurs="0" maxOccurs="2">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="numero">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="cp" minOccurs="0" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minExclusive value="0"/>
+                                                    <xs:maxExclusive value="99999"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>    
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="telefonos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="telefono" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType mixed="true">
+                                                <xs:attribute name="tipo_telef" >
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="movil"/>
+                                                            <xs:enumeration value="fijo" />
+                                                            <xs:enumeration value="casa" />
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

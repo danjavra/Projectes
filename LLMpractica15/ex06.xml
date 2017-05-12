@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<contactos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="exercici06.xsd">
+    <contacto>
+        <nombre>Luke</nombre>
+        <apellido1>Sky</apellido1>
+        <apellido2>Walker</apellido2>
+        <edad>35</edad>
+        <direccion>
+            <tipo_via tipo="plaza">Plaza Mayor Tatooine</tipo_via>
+            <Piso>bajos</Piso>
+            <puerta>1</puerta>
+            <numero>62</numero>
+            <cp>83723</cp>
+        </direccion>
+        <telefonos>
+            <telefono tipo_telef="movil">673829100</telefono>
+            <telefono tipo_telef="fijo">932654455</telefono>
+        </telefonos>
+    </contacto>
+    <contacto>
+        <nombre>Rompe</nombre>
+        <apellido1>Techos</apellido1>
+        <apellido2>Gafotas</apellido2>
+        <edad>45</edad>
+        <direccion>
+            <tipo_via tipo="calle">Buenavista</tipo_via>
+            <Piso>3</Piso>
+            <puerta>4</puerta>
+            <numero>32</numero>
+            <cp>83212</cp>
+        </direccion>
+        <telefonos>
+            <telefono tipo_telef="movil">669824152</telefono>
+            <telefono tipo_telef="fijo">939282233</telefono>
+        </telefonos>
+    </contacto>
+</contactos>
