@@ -12,6 +12,7 @@ and open the template in the editor.
     <body>
            <h1>Lista de Usuarios Registrados</h1>
         <?php
+       
         session_start();
         //Nos aseguramos de que haya un usuario autentificado
         if(isset($_SESSION["user"])){
