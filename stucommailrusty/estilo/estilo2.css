@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-may-2017, 10:42:53
+    Author     : 25627477A
+*/
+
+*,html,body{
+box-sizing: border-box;
+    margin: 0;
+    font-family:cursive;
+}
+
+h1{
+    text-align: center;
+}
+
+.enviar{
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 0.5em 3em;
+    font-size: 20px;
+    margin: 50px auto;
+    display: block; 
+    margin: 40px auto;
+}
+
+.div1{
+    font-size: 20px;
+    background-color: lightgray;
+    min-height: 500px;
+    width: 50%;
+    margin:auto;
+}
+
+.logout {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 0.5em 3em;
+    display: table;
+    margin: auto;
+}
+            
+.body{
+    margin-left: 23px;
+    height: 200px;
+    margin-left: 23px;
+    width: 75%;
+    }
+    
+.subject{
+    width: 50%;
+    margin-left: 25px;
+}
+input:not([type="submit"]),select{
+
+    font-size: 15px;
+    height: 30px;
+}
+
+span{
+    margin-left: 60px;
+}
+
+.div1 input:not([type="submit"]) , .div1 select,.div1 textarea{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.div1 textarea{
+    margin-left: 50px;
+}
