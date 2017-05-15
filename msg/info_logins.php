@@ -44,21 +44,18 @@ and open the template in the editor.
             $FechaHora = selectFechaHora($usuario);
       
             echo "Última sesión del usuario $usuario :    $FechaHora<br></br>";
-        }
+        
        
 
         }else{
             echo"No estás autentificado.";
         }
-          $tipo = getTipoUsuario($username);
-                if($tipo == 0){
-                    //dirigimos al usuario a su homepage.
-                    echo"<a href='userHome.php'>Volver al menú</a>";
-                    
-                }else if($tipo == 1){
-                    //Dirigimos a la página de administrador
+          
+      
                     echo"<a href='adminHome.php'>Volver al menú</a>";
                 }
+        
+       
         ?>
     </body>
 </html>
