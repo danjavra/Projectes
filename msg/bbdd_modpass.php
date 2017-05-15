@@ -13,23 +13,23 @@ function getTipoUsuario($username){
     return $type;
 }
 
-function PasswordUsername($username){
+function PasswordUsername($username,$pass){
      $conectar = conectar("msg");
      $select = "select password from user where username='$username'";
      $resultado = mysqli_query($conectar, $select);
      $fila = mysqli_fetch_array($resultado);
      extract($fila);
      desconectar($conectar);
-     return $password;
+     return password_verify($pass,$password);
 }
-function modificarPassword($nuevopass,$username){
+function modificarPassword($passwordcif,$username){
     $conectar = conectar("msg");
-    $update = "update user set password='$nuevopass' where username = '$username'";
+    $update = "update user set password='$passwordcif' where username = '$username'";
     if(mysqli_query($conectar, $update)){
         echo"Se ha modificado la contraseña!";
     }
     else{
-    mysqli_error($conectar);
+        echo mysqli_error($conectar);
     }
     desconectar($conectar);
 }

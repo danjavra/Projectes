@@ -30,24 +30,22 @@ and open the template in the editor.
   
          if(isset($_POST['Modificar'])){
        $username = $_SESSION["user"];
-       $password = PasswordUsername($username);
+      
        $actualpass = $_POST['pass'];
        $nuevopass = $_POST['npass'];
        $confirmar = $_POST['cpass'];    
-        
-            if($password==$actualpass && $nuevopass==$confirmar){
-                modificarPassword($nuevopass,$username);
-            }
-            if($password!=$actualpass){
-              echo"Contraseña incorrecta<br>";  
-            }
-            
+       $passwordcif = password_hash($nuevopass, PASSWORD_DEFAULT);
+       
+            if(PasswordUsername($username,$actualpass)){
+                if($nuevopass == $confirmar){
+                modificarPassword($passwordcif,$username);
+            }          
             if($nuevopass!=$confirmar){
                 echo"Error: La confirmación de la contraseña y la nueva contraseña són diferentes.<br>";
             }
-         
+            }
         }
-
+        
         }else{
             echo"No estás autentificado.";
         }

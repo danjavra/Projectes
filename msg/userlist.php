@@ -12,13 +12,28 @@ and open the template in the editor.
     <body>
            <h1>Lista de Usuarios Registrados</h1>
         <?php
-       
+        require_once 'bbdd_userlist.php';
         session_start();
         //Nos aseguramos de que haya un usuario autentificado
         if(isset($_SESSION["user"])){
         // cogemos la variable de sesión y saludamos al usuario
         $username = $_SESSION["user"];
         echo"¡Hola $username!";
+        echo"<br>===================================</br>";
+         echo' <table>
+            <tr>
+                <th>| Nombre de Usuario | </th>
+                <th> | Nombre | </th>
+                <th> | Apellido | </th>
+            </tr>';
+         $listadoUsuarios = listadoUsuario();
+        while($fila = mysqli_fetch_array($listadoUsuarios)){
+            extract($fila);
+            echo"<tr><td>$username</td><td>$name</td><td>$surname</td></tr>";
+        }
+        echo'</table></br>';
+        
+        
         }else{
             echo"No estás autentificado.";
         }
