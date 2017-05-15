@@ -12,12 +12,41 @@ and open the template in the editor.
     <body>
             <h1>Consulta de las horas de inicio de sesión de un Usuario</h1>
         <?php
+      require_once 'bbdd_infolog.php';
         session_start();
         //Nos aseguramos de que haya un usuario autentificado
         if(isset($_SESSION["user"])){
         // cogemos la variable de sesión y saludamos al usuario
         $username = $_SESSION["user"];
         echo"¡Hola $username!";
+        
+        
+               echo' <form action="" method="POST">
+        <p>Escoge un usuario:
+            
+            <select name="usuario">';
+
+            $allUser = selectAllUser();
+            while($fila = mysqli_fetch_array($allUser)){
+                extract($fila);
+                echo"<option value='$name'>$name $surname</option>";
+            }
+                
+            echo'</select>
+             </p>
+                <input type="submit" name="obtener" value="Filtrar">
+            </form>';
+        
+       
+        if(isset($_POST["obtener"])){
+            
+            $usuario = $_POST["usuario"];
+            $FechaHora = selectFechaHora($usuario);
+      
+            echo "Última sesión del usuario $usuario :    $FechaHora<br></br>";
+        }
+       
+
         }else{
             echo"No estás autentificado.";
         }
