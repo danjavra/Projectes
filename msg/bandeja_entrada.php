@@ -44,14 +44,15 @@ and open the template in the editor.
             } else if ($read == 1) {
                 $read1 = " Leído";
             }
-
+echo"<br>______________________________________________<br>";
             echo"De: $sender <br> Tema: $subject<br>Date: $date<br>Leer: $read1<br><br>";
             echo"<form action='' method='POST'>";
             echo"<input type='hidden' value='$idmessage' name='idmessage'>";
             if($read==0){
             echo"<input type='submit' value='Leer' name='leer'>";
             }else if($read==1){
-                echo" Leído";
+                echo" Leído ";
+            echo"<input type='submit' value='Leer' name='leer'>";    
             }
             echo"</form>";
            
@@ -61,10 +62,10 @@ and open the template in the editor.
         }
         
         if($posicion + 10 <=$total){
-              echo "Mostrando " . ($posicion + 1) . " al " . ($posicion + 10) . " de $total ";
+              echo "Mostrando del " . ($posicion + 1) . " al " . ($posicion + 10) . " de $total ";
         }
         else {
-        echo "Mostrando " . ($posicion + 1) . " al $total de $total";
+        echo "Mostrando del " . ($posicion + 1) . " al $total de $total";
         }
         
         if ($posicion + 10 < $total) {
@@ -77,10 +78,10 @@ and open the template in the editor.
             $idmessage = $_POST["idmessage"];
             $mensajes = selectBody($idmessage);
             updateRead($idmessage);
-            echo"<div class='bodymensajes'>";
-            echo"<h2>Body:</h2>";
+           
+            echo"<h2>Contenido:</h2>";
             echo "$mensajes";
-            echo"</div>";
+            
         }
     
         }else{

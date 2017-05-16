@@ -25,7 +25,7 @@ and open the template in the editor.
         $rankingUsuario = rankingUsuario();
         while($fila = mysqli_fetch_array($rankingUsuario)){
             extract($fila);
-            echo"<br><tr>Usuario:<td> $sender</td> ,mensajes enviados <td> $mensajes_enviados</td></tr><br>";
+            echo"<br><tr>Usuario:<td> $sender</td> , mensajes enviados: <td> $mensajes_enviados</td></tr><br>";
         }
         
    

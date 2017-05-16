@@ -30,7 +30,7 @@ and open the template in the editor.
         while($fila = mysqli_fetch_array($consultarMensaje)){
             extract($fila);
             
-            echo"Para:$receiver<br>Tema:$subject<br>Data:$date<br>Mensaje:$body<br></br>";
+            echo"Para:$receiver<br>Tema:$subject<br>Data:$date<br></br>";
             
             
         }
@@ -39,10 +39,10 @@ and open the template in the editor.
         }
         
          if($posicion + 10 <=$total){
-              echo "Mostrando " . ($posicion + 1) . " al " . ($posicion + 10) . " de $total ";
+              echo "Mostrando del " . ($posicion + 1) . " al " . ($posicion + 10) . " de $total ";
         }
         else {
-        echo "Mostrando " . ($posicion + 1) . " al $total de $total";
+        echo "Mostrando del " . ($posicion + 1) . " al $total de $total";
         }
         
         if ($posicion + 10 < $total) {
