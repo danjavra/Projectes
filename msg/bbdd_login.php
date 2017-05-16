@@ -27,3 +27,15 @@ function verificarUser($username, $pass){
         return false;
     }
 }
+
+function registrarEvento($username,$date,$tipo){
+    $conectar = conectar("msg");
+    $insert = "insert into event values(null,'$username','$date','I')";
+    if(mysqli_query($conectar, $insert)){
+        echo"";
+    }else{
+        echo mysqli_error($conectar);
+    }
+    desconectar($conectar);
+}
+

@@ -12,9 +12,9 @@ function getTipoUsuario($username){
     return $type;
 }
 
-function selectUser($username){
+function selectUser($name){
     $conectar = conectar("msg");
-    $select = "select * from user where username!='$username'";
+    $select = "select username from user where name!='$name'";
     $resultado = mysqli_query($conectar, $select);
     desconectar($conectar);
     return $resultado;

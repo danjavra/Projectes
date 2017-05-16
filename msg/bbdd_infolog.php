@@ -24,7 +24,7 @@ function selectAllUser(){
 
 function selectFechaHora($usuario){
     $conectar = conectar("msg");
-    $select = "select max(date) as 'UltimaSesion' from event where user = '$usuario'";
+    $select = "select max(date) as UltimaSesion from event where user = '$usuario'";
     $resultado = mysqli_query($conectar, $select);
     $fila = mysqli_fetch_array($resultado);
     extract($fila);

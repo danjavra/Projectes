@@ -14,38 +14,30 @@ and open the template in the editor.
         <?php
         require_once 'bbdd_enviar_msg.php';
         session_start();
-        //Nos aseguramos de que haya un usuario autentificado
+       
+        
         if(isset($_SESSION["user"])){
         // cogemos la variable de sesión y saludamos al usuario
-        $username = $_SESSION["user"];
-        echo"¡Hola $username!";
+        $usuario = $_SESSION["user"];
+        echo"¡Hola $usuario!";
         
-        }else{
-            echo"No estás autentificado.";
-        }
-        
-         $allUser = selectUser($username);
+        $allUser = selectUser($usuario);
         $date = date('Y-m-d H:i:s');
         
-      
-        ?>
-        
-        
-        <form action="" method="POST">
-            <p><span>Receiver:</span><select name="receiver" required><?php 
+        echo' <form action="" method="POST">
+            <p><span>Para:</span><select name="receiver" required>';
             while($fila = mysqli_fetch_array($allUser)){
                 extract($fila);
-                echo"<option value='$name'>$name $surname</option>";
+                echo"<option value='$username'>$username</option>";
             }
-            ?></select></p>
-            <p><span>Subject:</span><input class="subject" type="text" name="subject" maxlength="50" required></p>
-            <p><span>Body:</span><textarea class="body" name="body" placeholder="Escribe un mensaje" required></textarea></p>
+           echo'</select></p>
+            <p><span>Tema:</span><input class="subject" type="text" name="subject" maxlength="50" required></p>
+            <p><span>Mensaje:</span><textarea class="body" name="body" placeholder="Escribe un mensaje" required></textarea></p>
             <p><input type="submit" class="enviar" name="enviar" value="Enviar"></p>
        
-        </form>
-       
-        
-        <?php 
+        </form>';
+
+     
         if(isset($_POST["enviar"])){
             $receiver = $_POST["receiver"];
             $subject = $_POST["subject"];
@@ -54,9 +46,8 @@ and open the template in the editor.
           enviarMensaje($usuario,$receiver,$date,$subject,$body);
           registrarEvent($usuario,$date);
         }
-        
-        
-        $tipo = getTipoUsuario($username);
+      
+        $tipo = getTipoUsuario($usuario);
                 if($tipo == 0){
                     //dirigimos al usuario a su homepage.
                     echo"<a href='userHome.php'>Volver al menú</a>";
@@ -65,6 +56,14 @@ and open the template in the editor.
                     //Dirigimos a la página de administrador
                     echo"<a href='adminHome.php'>Volver al menú</a>";
                 }
+        else{
+            echo"No estás autentificado.";
+        }
+          
+}
         ?>
+        
+        
+       
     </body>
 </html>

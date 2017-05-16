@@ -29,12 +29,12 @@ and open the template in the editor.
             $allUser = selectAllUser();
             while($fila = mysqli_fetch_array($allUser)){
                 extract($fila);
-                echo"<option value='$name'>$name $surname</option>";
+                echo"<option value='$username'>$name $surname</option>";
             }
                 
             echo'</select>
              </p>
-                <input type="submit" name="obtener" value="Filtrar">
+                <input type="submit" name="obtener" value="Filtrar"><br></br>
             </form>';
         
        
@@ -43,7 +43,7 @@ and open the template in the editor.
             $usuario = $_POST["usuario"];
             $FechaHora = selectFechaHora($usuario);
       
-            echo "Última sesión del usuario $usuario :    $FechaHora<br></br>";
+            echo "Última sesión del usuario $usuario :   $FechaHora<br></br>";
         
        
 

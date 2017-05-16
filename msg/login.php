@@ -22,11 +22,15 @@
                 session_start();
                 $_SESSION["user"]=$username;
                 $tipo = getTipoUsuario($username);
+                $date = date('Y-m-d H:i:s');
+                registrarEvento($username,$date,$tipo);
                 if($tipo == 0){
                     //dirigimos al usuario a su homepage.
+                    
                     header("Location: UserHome.php");
                 }else if($tipo == 1){
                     //Dirigimos a la página de administrador
+                    
                     header("Location: AdminHome.php");
                 }else{
                     echo"Tipo de usuario incorrecto";
