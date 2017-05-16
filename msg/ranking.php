@@ -12,24 +12,28 @@ and open the template in the editor.
     <body>
          <h1>Mostrar el Ranking de los Usuarios</h1>
         <?php
+        require_once 'bbdd_ranking.php';
         session_start();
         //Nos aseguramos de que haya un usuario autentificado
         if(isset($_SESSION["user"])){
         // cogemos la variable de sesión y saludamos al usuario
         $username = $_SESSION["user"];
         echo"¡Hola $username!";
+         echo"<br>==========================================</br>";
+       
+        
+        $rankingUsuario = rankingUsuario();
+        while($fila = mysqli_fetch_array($rankingUsuario)){
+            extract($fila);
+            echo"<br><tr>Usuario:<td> $sender</td> ,mensajes enviados <td> $mensajes_enviados</td></tr><br>";
+        }
+        
+   
         }else{
             echo"No estás autentificado.";
         }
-        $tipo = getTipoUsuario($username);
-                if($tipo == 0){
-                    //dirigimos al usuario a su homepage.
-                    echo"<a href='userHome.php'>Volver al menú</a>";
-                    
-                }else if($tipo == 1){
-                    //Dirigimos a la página de administrador
-                    echo"<a href='adminHome.php'>Volver al menú</a>";
-                }
+                    echo"<br></br><a href='adminHome.php'>Volver al menú</a>";
+                
         ?>
     </body>
 </html>

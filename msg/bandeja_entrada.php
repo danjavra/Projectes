@@ -19,7 +19,7 @@ and open the template in the editor.
         // cogemos la variable de sesión y saludamos al usuario
         $username = $_SESSION["user"];
         echo"¡Hola $username!";
-        
+        echo"<br>==========================================</br>";
         $date = date('Y-m-d H:i:s');
 
         
@@ -40,18 +40,18 @@ and open the template in the editor.
         while ($fila = mysqli_fetch_array($mensajesOrdenados)) {
             extract($fila);
             if ($read == 0) {
-                $read1 = "no";
+                $read1 = " Pendiente de leer";
             } else if ($read == 1) {
-                $read1 = "yes";
+                $read1 = " Leído";
             }
 
-            echo"Sender:$sender <br> Subject:$subject<br>Date:$date<br>Read:$read1<br><br>";
+            echo"De: $sender <br> Tema: $subject<br>Date: $date<br>Leer: $read1<br><br>";
             echo"<form action='' method='POST'>";
             echo"<input type='hidden' value='$idmessage' name='idmessage'>";
             if($read==0){
             echo"<input type='submit' value='Leer' name='leer'>";
             }else if($read==1){
-                echo"Leido";
+                echo" Leído";
             }
             echo"</form>";
            
@@ -70,7 +70,7 @@ and open the template in the editor.
         if ($posicion + 10 < $total) {
         echo "<a href='consultarMensaje.php?posicion=" .($posicion + 10)."'>next</a>";
 }
-        echo"</div>";
+      
 
         if (isset($_POST["leer"])) {
 
@@ -91,11 +91,11 @@ and open the template in the editor.
         $tipo = getTipoUsuario($username);
                 if($tipo == 0){
                     //dirigimos al usuario a su homepage.
-                    echo"<a href='userHome.php'>Volver al menú</a>";
+                    echo"<br></br><a href='userHome.php'>Volver al menú</a>";
                     
                 }else if($tipo == 1){
                     //Dirigimos a la página de administrador
-                    echo"<a href='adminHome.php'>Volver al menú</a>";
+                    echo"<br></br><a href='adminHome.php'>Volver al menú</a>";
                 }
         ?>
     </body>
