@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="peliculas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pelicula" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="directores" minOccurs="1" >
+                                 <xs:complexType>
+                                   <xs:sequence>
+                                       <xs:element name="director" type="xs:string" maxOccurs="unbounded" />
+                                   </xs:sequence>
+                                 </xs:complexType>        
+                            </xs:element>
+                            <xs:element name="fecha" type="xs:date"/>
+                            <xs:element name="protagonistas" minOccurs="0" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                   <xs:sequence>
+                                       <xs:element name="protagonista" type="xs:string"/>
+                                   </xs:sequence>
+                                 </xs:complexType>        
+                            </xs:element>
+                            <xs:element name="genero" >
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="drama"/>
+                                        <xs:enumeration value="comedia"/>
+                                        <xs:enumeration value="documental"/>
+                                        <xs:enumeration value="terror"/>
+                                        <xs:enumeration value="thriller"/>
+                                        <xs:enumeration value="humor"/>
+                                    </xs:restriction>
+                                </xs:simpleType> 
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+        
+          
+</xs:schema>

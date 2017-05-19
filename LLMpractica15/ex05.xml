@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<peliculas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:noNamespaceSchemaLocation="exercici05.xsd">
+    <pelicula>
+        <titulo>Algo pasa con Mary</titulo>
+        <directores>
+            <director>Bob Farrelly</director>
+            <director>Peter Farrelly</director>
+        </directores>
+        <fecha>04-05-1998</fecha>
+        <protagonistas>
+            <protagonista>Ben Stiller</protagonista>
+            <protagonista>Cameron Diaz</protagonista>
+        </protagonistas>
+        <genero>comedia</genero>
+    </pelicula>
+</peliculas>
