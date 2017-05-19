@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE juego SYSTEM "exercici01.dtd">
+<!DOCTYPE juego SYSTEM "exercici02.dtd">
 <juego>
 <nombre>Run to Mordor</nombre>
 <ubicacion>Tierra Media</ubicacion>
