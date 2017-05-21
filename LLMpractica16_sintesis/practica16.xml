@@ -3,6 +3,83 @@
 
 <equipos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
            xsi:noNamespaceSchemaLocation="practica16.xsd">
+    <equipo>
+        <nombre>Dream Team</nombre>
+        <Tipo_trabajo>Equipo de Futbol sala</Tipo_trabajo>
+        <logros>
+            <año id="2015">
+                <exitos>15</exitos>
+                <fracasos>5</fracasos>
+            </año>
+            <año id="2016">
+                <exitos>11</exitos>
+                <fracasos>8</fracasos>
+            </año>   
+        </logros>
+        <jugadores>
+            <jugador>
+                <nombre>Joan</nombre>
+                <apellido>Ayza</apellido>
+                <cargo tipo="Delantero">
+                    <goles>16</goles>
+                    <asistencias>2</asistencias>
+                </cargo>
+                <fecha_nacimiento>05-05-1982</fecha_nacimiento>
+                <ruta_imagen></ruta_imagen>
+                <hora_ultimo_login></hora_ultimo_login>
+                <dia_ultimo_login></dia_ultimo_login>
+            </jugador>
+            <jugador>
+                <nombre>Albert</nombre>
+                <apellido>Rico</apellido>
+                <cargo tipo="Portero">
+                    <goles_encajados>16</goles_encajados>
+                    <paradas>26</paradas>
+                </cargo>
+                <fecha_nacimiento>25-10-1982</fecha_nacimiento>
+                <ruta_imagen></ruta_imagen>
+                <hora_ultimo_login></hora_ultimo_login>
+                <dia_ultimo_login></dia_ultimo_login>
+            </jugador>
+            <jugador>
+                <nombre>Juan</nombre>
+                <apellido>Ruz</apellido>
+                <cargo tipo="Defensa">
+                    <robos_balon>22</robos_balon>
+                    <entradas>2</entradas>
+                </cargo>
+                <fecha_nacimiento>12-03-1987</fecha_nacimiento>
+                <ruta_imagen></ruta_imagen>
+                <hora_ultimo_login></hora_ultimo_login>
+                <dia_ultimo_login></dia_ultimo_login>
+            </jugador>
+            <jugador>
+                <nombre>Oriol</nombre>
+                <apellido>Galan</apellido>
+                <cargo tipo="Defensa">
+                    <robos_balon>36</robos_balon>
+                    <entradas>12</entradas>
+                </cargo>
+                <fecha_nacimiento>06-11-1982</fecha_nacimiento>
+                <ruta_imagen></ruta_imagen>
+                <hora_ultimo_login></hora_ultimo_login>
+                <dia_ultimo_login></dia_ultimo_login>
+            </jugador>
+            <jugador>
+                <nombre>Cristian</nombre>
+                <apellido>Siles</apellido>
+                <cargo tipo="Delantero">
+                    <goles>20</goles>
+                    <asistencias>13</asistencias>
+                </cargo>
+                <fecha_nacimiento>20-05-1992</fecha_nacimiento>
+                <ruta_imagen></ruta_imagen>
+                <hora_ultimo_login></hora_ultimo_login>
+                <dia_ultimo_login></dia_ultimo_login>
+            </jugador>
+        </jugadores>
+    </equipo>
+    
 </equipos>
 <!--
 To change this license header, choose License Headers in Project Properties.
