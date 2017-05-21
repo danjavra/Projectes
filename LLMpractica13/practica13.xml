@@ -88,13 +88,134 @@
     <grupo id="Andromeda" genero="metal">
          <nombre>Andromeda</nombre>
          <web>http://andromedazone.com</web>
-         <integrantes>6</integrantes>
-         
-         
+         <integrantes>
+             <integrante>
+                <nombre>Antonio</nombre>
+                <edad>23</edad>
+             </integrante>
+             <integrante>
+                <nombre>Julian</nombre>
+                <edad>22</edad>
+             </integrante>
+             <integrante>
+                <nombre>Pedro</nombre>
+                <edad>24</edad>
+             </integrante>
+             <integrante>
+                <nombre>Sara</nombre>
+                <edad>23</edad>
+             </integrante>
+         </integrantes>
+         <numero_conciertos>10</numero_conciertos>
+         <numero_fans>100.000</numero_fans>
     </grupo>
     <grupo genero="jazz">
         <nombre>BlueSky</nombre>
         <web>http://dba.com</web>
-         <integrantes>3</integrantes>
+         <integrantes>
+             <integrante>
+                <nombre>Andrea</nombre>
+                <edad>26</edad>
+             </integrante>
+             <integrante>
+                <nombre>Lucia</nombre>
+                <edad>27</edad>
+             </integrante>
+             <integrante>
+                <nombre>Sandra</nombre>
+                <edad>28</edad>
+             </integrante>
+         </integrantes>
+         <numero_conciertos>20</numero_conciertos>
+         <numero_fans>320.000</numero_fans>
     </grupo>     
 </grupos>
+
+<!--ex.5-->
+<liga genero="futbol sala">
+    <equipo id="Golfos">
+        <estilo_de_juego>Ofensivo</estilo_de_juego>
+        <director>Juan Palomo</director>
+        <preparador>Marc Crosas</preparador>
+        <ubicacion>Marina, Barcelona</ubicacion>
+        <victorias>7</victorias>
+        <derrotas>10</derrotas>
+        <jugadores>
+            <jugador>
+                <nombre>Joan</nombre>
+                <apellido>Ayza</apellido>
+                <funcion_principal>Delantero</funcion_principal>
+                <funcion_secundaria>Chutador de penaltis</funcion_secundaria>
+            </jugador>
+            <jugador>
+                <nombre>Albert</nombre>
+                <apellido>Rico</apellido>
+                <funcion_principal>Portero</funcion_principal>
+                <funcion_secundaria>Organizador de la defensa</funcion_secundaria>
+            </jugador>
+            <jugador>
+                <nombre>Juan</nombre>
+                <apellido>Ruz</apellido>
+                <funcion_principal>Delantero</funcion_principal>
+                <funcion_secundaria>Saques de corner</funcion_secundaria>
+            </jugador>
+            <jugador>
+                <nombre>Oriol</nombre>
+                <apellido>Galan</apellido>
+                <funcion_principal>Defensa</funcion_principal>
+                <funcion_secundaria>Chutador de faltas</funcion_secundaria>
+            </jugador>
+            <jugador>
+                <nombre>Paco</nombre>
+                <apellido>Siles</apellido>
+                <funcion_principal>Defensa</funcion_principal>
+                <funcion_secundaria>Organizador de juego</funcion_secundaria>
+            </jugador>
+        </jugadores>    
+    </equipo>
+    <equipo id="Tomacos">
+        <estilo_de_juego>Defensivo</estilo_de_juego>
+        <director>Salvador Carbonell</director>
+        <preparador>Joan Cespedes</preparador>
+        <ubicacion>Mundet, Barcelona</ubicacion>
+        <victorias>0</victorias>
+        <derrotas>24</derrotas>
+        <jugadores>
+            <jugador>
+                <nombre>Raimon</nombre>
+                <apellido>Sanllehy</apellido>
+                <funcion_principal>Delantero</funcion_principal>
+                <funcion_secundaria>Saques de banda</funcion_secundaria>
+            </jugador>
+            <jugador>
+                <nombre>Hugo</nombre>
+                <apellido>Dasilva</apellido>
+                <funcion_principal>Defensa</funcion_principal>
+                <funcion_secundaria>Organizador de juego</funcion_secundaria>
+            </jugador>
+            <jugador>
+                <nombre>Bernat</nombre>
+                <apellido>Cocera</apellido>
+                <funcion_principal>Delantero</funcion_principal>
+                <funcion_secundaria>Portero suplente</funcion_secundaria>
+            </jugador>
+            <jugador>
+                <nombre>Nacho</nombre>
+                <apellido>Vela</apellido>
+                <funcion_principal>Defensa</funcion_principal>
+                <funcion_secundaria>Chutador de faltas</funcion_secundaria>
+            </jugador>
+            <jugador>
+                <nombre>Kevin</nombre>
+                <apellido>Imo</apellido>
+                <funcion_principal>Portero</funcion_principal>
+                <funcion_secundaria>Organizador de la defensa</funcion_secundaria>
+            </jugador>
+        </jugadores>    
+    </equipo>
+
+
+
+
+
+</liga>
