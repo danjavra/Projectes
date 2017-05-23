@@ -34,11 +34,30 @@
                                         <xs:element name="jugador"> 
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="nombre"/>
-                                                    <xs:element name="apellido"/>
+                                                    <xs:element name="nombre">
+                                                       <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:minLength value="3"/>
+                                                            <xs:maxLength value="20"/>
+                                                        </xs:restriction>
+                                                       </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="apellido">
+                                                       <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:minLength value="3"/>
+                                                            <xs:maxLength value="20"/>
+                                                        </xs:restriction>
+                                                       </xs:simpleType>
+                                                    </xs:element>
                                                     <xs:element name="cargo">
-                                                        <xs:attribute name="tipo">
-                                                          <xs:complexType> 
+                                                       <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:minLength value="3"/>
+                                                            <xs:maxLength value="20"/>
+                                                        </xs:restriction>
+                                                          <xs:attribute name="tipo">
+                                                           <xs:complexType> 
                                                              <xs:sequence>
                                                                <xs:element name="goles" type="xs:integer" minOccurs="0"/>
                                                                <xs:element name="asistencias" type="xs:integer" minOccurs="0"/>
@@ -47,10 +66,17 @@
                                                                <xs:element name="robos_balon" type="xs:integer" minOccurs="0"/>
                                                                <xs:element name="entradas" type="xs:integer" minOccurs="0"/>
                                                              </xs:sequence>
-                                                          </xs:complexType>
-                                                        </xs:attribute>
+                                                           </xs:complexType>
+                                                         </xs:attribute>
+                                                       </xs:simpleType>   
                                                     </xs:element>
-                                                    <xs:element name="fecha_nacimiento" type="xs:date" maxOccurs="01-01-2000"/>
+                                                    <xs:element name="fecha_nacimiento">
+                                                       <xs:simpleType>
+                                                        <xs:restriction base="xs:date">
+                                                             <xs:minInclusive value="2000-01-01"/> 
+                                                        </xs:restriction>
+                                                       </xs:simpleType>
+                                                    </xs:element>
                                                     <xs:element name="ruta_imagen">
                                                         <xs:attribute name="tipo">
                                                             <xs:simpleType>
