@@ -4,5 +4,76 @@
 <xs:schema version="1.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
-
+    <xs:element name="equipos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="equipo" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre_equipo" type="xs:string"/>
+                            <xs:element name="Tipo_trabajo" type="xs:string"/>
+                            <xs:element name="logros">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="año" >
+                                           <xs:attribute name="id">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="exitos" minOccurs="0"/> 
+                                                  <xs:element name="fracasos" minOccurs="0"/>        
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                           </xs:attribute> 
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="jugadores">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="jugador"> 
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre"/>
+                                                    <xs:element name="apellido"/>
+                                                    <xs:element name="cargo">
+                                                        <xs:attribute name="tipo">
+                                                          <xs:complexType> 
+                                                             <xs:sequence>
+                                                               <xs:element name="goles" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="asistencias" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="goles_encajados" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="paradas" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="robos_balon" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="entradas" type="xs:integer" minOccurs="0"/>
+                                                             </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:attribute>
+                                                    </xs:element>
+                                                    <xs:element name="fecha_nacimiento" type="xs:date" maxOccurs="01-01-2000"/>
+                                                    <xs:element name="ruta_imagen">
+                                                        <xs:attribute name="tipo">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                 <xs:enumeration value="jpg"/>
+                                                                 <xs:enumeration value="gif"/>
+                                                                 <xs:enumeration value="png"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:element>
+                                                    <xs:element name="hora_ultimo_login" type="xs:time"/>
+                                                    <xs:element name="dia_ultimo_login" type="xs:date"/>                         
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>
