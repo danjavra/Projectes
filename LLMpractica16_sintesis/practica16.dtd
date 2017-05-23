@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT equipos (equipo+)>
+<!ATTLIST equipos xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST equipos xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+<!ELEMENT equipo (nombre_equipo,Tipo_trabajo,logros*,jugadores)>
+<!ELEMENT nombre_equipo (#PCDATA)>
+<!ELEMENT Tipo_trabajo (#PCDATA)>
+<!ELEMENT logros (año+)>
+<!ELEMENT año (exitos,fracasos)>
+<!ATTLIST año id CDATA #REQUIRED>
+<!ELEMENT exitos (#PCDATA)>
+<!ELEMENT fracasos (#PCDATA)>
+<!ELEMENT jugadores (jugador+)>
+<!ELEMENT jugador (nombre,apellido,cargo,fecha_nacimiento,ruta_imagen,hora_ultimo_login,dia_ultimo_login)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT cargo (goles?,asistencias?,goles_encajados?,paradas?,robos_balon?,entradas?)>
+<!ATTLIST cargo tipo CDATA #REQUIRED>
+<!ELEMENT fecha_nacimiento (#PCDATA)>
+<!ELEMENT ruta_imagen (#PCDATA)>
+<!ATTLIST ruta_imagen tipo_imagen (jpg|png|gif) #REQUIRED>
+<!ELEMENT hora_ultimo_login (#PCDATA)>
+<!ELEMENT dia_ultimo_login (#PCDATA)>
+<!ELEMENT goles (#PCDATA)>
+<!ELEMENT asistencias (#PCDATA)>
+<!ELEMENT goles_encajados (#PCDATA)>
+<!ELEMENT paradas (#PCDATA)>
+<!ELEMENT robos_balon (#PCDATA)>
+<!ELEMENT entradas (#PCDATA)>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
