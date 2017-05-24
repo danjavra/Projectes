@@ -24,7 +24,7 @@
                     <goles>16</goles>
                     <asistencias>2</asistencias>
                 </cargo>
-                <fecha_nacimiento>05-05-1982</fecha_nacimiento>
+                <fecha_nacimiento>1982-05-05</fecha_nacimiento>
                 <ruta_imagen tipo_imagen="jpg"></ruta_imagen>
                 <hora_ultimo_login></hora_ultimo_login>
                 <dia_ultimo_login></dia_ultimo_login>
@@ -36,7 +36,7 @@
                     <goles_encajados>16</goles_encajados>
                     <paradas>26</paradas>
                 </cargo>
-                <fecha_nacimiento>25-10-1982</fecha_nacimiento>
+                <fecha_nacimiento>1982-10-25</fecha_nacimiento>
                 <ruta_imagen tipo_imagen="jpg"></ruta_imagen>
                 <hora_ultimo_login></hora_ultimo_login>
                 <dia_ultimo_login></dia_ultimo_login>
@@ -48,7 +48,7 @@
                     <robos_balon>22</robos_balon>
                     <entradas>2</entradas>
                 </cargo>
-                <fecha_nacimiento>12-03-1987</fecha_nacimiento>
+                <fecha_nacimiento>1987-12-03</fecha_nacimiento>
                 <ruta_imagen tipo_imagen="jpg"></ruta_imagen>
                 <hora_ultimo_login></hora_ultimo_login>
                 <dia_ultimo_login></dia_ultimo_login>
@@ -60,7 +60,7 @@
                     <robos_balon>36</robos_balon>
                     <entradas>12</entradas>
                 </cargo>
-                <fecha_nacimiento>06-11-1982</fecha_nacimiento>
+                <fecha_nacimiento>1982-06-11</fecha_nacimiento>
                 <ruta_imagen tipo_imagen="jpg">logo.jpg</ruta_imagen>
                 <hora_ultimo_login></hora_ultimo_login>
                 <dia_ultimo_login></dia_ultimo_login>
@@ -72,7 +72,7 @@
                     <goles>20</goles>
                     <asistencias>13</asistencias>
                 </cargo>
-                <fecha_nacimiento>20-05-1992</fecha_nacimiento>
+                <fecha_nacimiento>1992-05-20</fecha_nacimiento>
                 <ruta_imagen tipo_imagen="jpg"></ruta_imagen>
                 <hora_ultimo_login></hora_ultimo_login>
                 <dia_ultimo_login></dia_ultimo_login>

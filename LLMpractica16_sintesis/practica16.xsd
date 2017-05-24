@@ -74,13 +74,13 @@
                                                     <xs:element name="fecha_nacimiento">
                                                        <xs:simpleType>
                                                         <xs:restriction base="xs:date">
-                                                             <xs:minInclusive value="2000-01-01"/> 
+                                                             <xs:maxInclusive value="2000-01-01"/> 
                                                         </xs:restriction>
                                                        </xs:simpleType>
                                                     </xs:element>
                                                     <xs:element name="ruta_imagen">
                                                         <xs:complexType>
-                                                        <xs:attribute name="tipo">
+                                                        <xs:attribute name="tipo_imagen">
                                                             <xs:simpleType>
                                                                <xs:restriction base="xs:string">
                                                                  <xs:enumeration value="jpg"/>
