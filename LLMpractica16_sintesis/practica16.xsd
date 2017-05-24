@@ -16,14 +16,13 @@
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="año" >
-                                           <xs:attribute name="id">
-                                            <xs:complexType>
+                                           <xs:complexType>
                                                 <xs:sequence>
-                                                  <xs:element name="exitos" minOccurs="0"/> 
-                                                  <xs:element name="fracasos" minOccurs="0"/>        
+                                                  <xs:element name="exitos" minOccurs="0" type="xs:integer"/> 
+                                                  <xs:element name="fracasos" minOccurs="0" type="xs:integer"/>        
                                                 </xs:sequence>
-                                            </xs:complexType>
-                                           </xs:attribute> 
+                                            <xs:attribute name="id" type="xs:string"/>
+                                           </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
@@ -51,14 +50,9 @@
                                                        </xs:simpleType>
                                                     </xs:element>
                                                     <xs:element name="cargo">
-                                                       <xs:simpleType>
-                                                        <xs:restriction base="xs:string">
-                                                            <xs:minLength value="3"/>
-                                                            <xs:maxLength value="20"/>
-                                                        </xs:restriction>
-                                                          <xs:attribute name="tipo">
-                                                           <xs:complexType> 
-                                                             <xs:sequence>
+                                                        <xs:complexType>
+                                                        
+                                                        <xs:sequence>
                                                                <xs:element name="goles" type="xs:integer" minOccurs="0"/>
                                                                <xs:element name="asistencias" type="xs:integer" minOccurs="0"/>
                                                                <xs:element name="goles_encajados" type="xs:integer" minOccurs="0"/>
@@ -66,9 +60,16 @@
                                                                <xs:element name="robos_balon" type="xs:integer" minOccurs="0"/>
                                                                <xs:element name="entradas" type="xs:integer" minOccurs="0"/>
                                                              </xs:sequence>
+                                                           
+                                                           <xs:attribute name="tipo">
+                                                               <xs:simpleType>
+                                                           <xs:restriction base="xs:string">
+                                                            <xs:minLength value="3"/>
+                                                            <xs:maxLength value="20"/>
+                                                        </xs:restriction>
+                                                               </xs:simpleType>
+                                                           </xs:attribute>
                                                            </xs:complexType>
-                                                         </xs:attribute>
-                                                       </xs:simpleType>   
                                                     </xs:element>
                                                     <xs:element name="fecha_nacimiento">
                                                        <xs:simpleType>
@@ -78,6 +79,7 @@
                                                        </xs:simpleType>
                                                     </xs:element>
                                                     <xs:element name="ruta_imagen">
+                                                        <xs:complexType>
                                                         <xs:attribute name="tipo">
                                                             <xs:simpleType>
                                                                <xs:restriction base="xs:string">
@@ -87,6 +89,7 @@
                                                                </xs:restriction>
                                                             </xs:simpleType>
                                                         </xs:attribute>
+                                                        </xs:complexType>
                                                     </xs:element>
                                                     <xs:element name="hora_ultimo_login" type="xs:time"/>
                                                     <xs:element name="dia_ultimo_login" type="xs:date"/>                         
