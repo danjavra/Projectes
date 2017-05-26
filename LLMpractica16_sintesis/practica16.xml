@@ -25,9 +25,9 @@
                     <asistencias>2</asistencias>
                 </cargo>
                 <fecha_nacimiento>1982-05-05</fecha_nacimiento>
-                <ruta_imagen tipo_imagen="jpg"></ruta_imagen>
-                <hora_ultimo_login></hora_ultimo_login>
-                <dia_ultimo_login></dia_ultimo_login>
+                <ruta_imagen tipo_imagen="gif">joan.gif</ruta_imagen>
+                <hora_ultimo_login>16:40:05</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-20</dia_ultimo_login>
             </jugador>
             <jugador>
                 <nombre>Albert</nombre>
@@ -37,9 +37,9 @@
                     <paradas>26</paradas>
                 </cargo>
                 <fecha_nacimiento>1982-10-25</fecha_nacimiento>
-                <ruta_imagen tipo_imagen="jpg"></ruta_imagen>
-                <hora_ultimo_login></hora_ultimo_login>
-                <dia_ultimo_login></dia_ultimo_login>
+                <ruta_imagen tipo_imagen="jpg">rico.jpg</ruta_imagen>
+                <hora_ultimo_login>22:35:12</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-25</dia_ultimo_login>
             </jugador>
             <jugador>
                 <nombre>Juan</nombre>
@@ -49,9 +49,9 @@
                     <entradas>2</entradas>
                 </cargo>
                 <fecha_nacimiento>1987-12-03</fecha_nacimiento>
-                <ruta_imagen tipo_imagen="jpg"></ruta_imagen>
-                <hora_ultimo_login></hora_ultimo_login>
-                <dia_ultimo_login></dia_ultimo_login>
+                <ruta_imagen tipo_imagen="png">ruz.png</ruta_imagen>
+                <hora_ultimo_login>09:25:36</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-24</dia_ultimo_login>
             </jugador>
             <jugador>
                 <nombre>Oriol</nombre>
@@ -62,8 +62,8 @@
                 </cargo>
                 <fecha_nacimiento>1982-06-11</fecha_nacimiento>
                 <ruta_imagen tipo_imagen="jpg">logo.jpg</ruta_imagen>
-                <hora_ultimo_login></hora_ultimo_login>
-                <dia_ultimo_login></dia_ultimo_login>
+                <hora_ultimo_login>11:40:59</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-21</dia_ultimo_login>
             </jugador>
             <jugador>
                 <nombre>Cristian</nombre>
@@ -73,12 +73,11 @@
                     <asistencias>13</asistencias>
                 </cargo>
                 <fecha_nacimiento>1992-05-20</fecha_nacimiento>
-                <ruta_imagen tipo_imagen="jpg"></ruta_imagen>
-                <hora_ultimo_login></hora_ultimo_login>
-                <dia_ultimo_login></dia_ultimo_login>
+                <ruta_imagen tipo_imagen="jpg">siles.jpg</ruta_imagen>
+                <hora_ultimo_login>21:05:02</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-25</dia_ultimo_login>
             </jugador>
         </jugadores>
     </equipo>
-    
 </equipos>
 
