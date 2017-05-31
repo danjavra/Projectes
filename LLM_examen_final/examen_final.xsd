@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="equipos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="equipo" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre_equipo" type="xs:string"/>
+                            <xs:element name="Tipo_trabajo" type="xs:string"/>
+                            <xs:element name="followers">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1"/> 
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="competiciones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="competicion" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="liga" type="xs:string" minOccurs="0"/>
+                                                    <xs:element name="champions" type="xs:string" minOccurs="0"/>
+                                                    <xs:element name="parrillada" type="xs:string" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="fechaCompeticion">
+                                        <xs:simpleType>
+                                           <xs:restriction base="xs:date">
+                                                <xs:minInclusive value="1500-01-01"/>
+                                                <xs:maxInclusive value="3000-05-29"/>
+                                           </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="logros">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="año" minOccurs="1" maxOccurs="unbounded">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="exitos" minOccurs="1" type="xs:integer"/> 
+                                                  <xs:element name="fracasos" minOccurs="1" type="xs:integer"/>        
+                                                </xs:sequence>
+                                            <xs:attribute name="id" type="xs:string"/>
+                                           </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="jugadores">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="jugador" minOccurs="1" maxOccurs="unbounded"> 
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre">
+                                                       <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:minLength value="3"/>
+                                                            <xs:maxLength value="20"/>
+                                                        </xs:restriction>
+                                                       </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="apellido">
+                                                       <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:minLength value="3"/>
+                                                            <xs:maxLength value="20"/>
+                                                        </xs:restriction>
+                                                       </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="cargo">
+                                                        <xs:complexType>
+                                                          <xs:sequence>
+                                                               <xs:element name="goles" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="asistencias" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="goles_encajados" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="paradas" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="robos_balon" type="xs:integer" minOccurs="0"/>
+                                                               <xs:element name="entradas" type="xs:integer" minOccurs="0"/>
+                                                          </xs:sequence>
+                                                           <xs:attribute name="tipo">
+                                                               <xs:simpleType>
+                                                           <xs:restriction base="xs:string">
+                                                            <xs:minLength value="3"/>
+                                                            <xs:maxLength value="20"/>
+                                                        </xs:restriction>
+                                                               </xs:simpleType>
+                                                           </xs:attribute>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="fecha_nacimiento">
+                                                       <xs:simpleType>
+                                                        <xs:restriction base="xs:date">
+                                                             <xs:maxInclusive value="2000-01-01"/> 
+                                                        </xs:restriction>
+                                                       </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="ruta_imagen">
+                                                        <xs:complexType mixed="true">
+                                                        <xs:attribute name="tipo_imagen">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                 <xs:enumeration value="jpg"/>
+                                                                 <xs:enumeration value="gif"/>
+                                                                 <xs:enumeration value="png"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="hora_ultimo_login" type="xs:time"/>
+                                                    <xs:element name="dia_ultimo_login" type="xs:date"/>                         
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                   <xs:attribute name="red_social">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                         <xs:enumeration value="facebook"/>
+                         <xs:enumeration value="google+"/>
+                         <xs:enumeration value="twitter"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                   </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

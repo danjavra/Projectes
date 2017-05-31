@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipos SYSTEM "examen_final.dtd">
+
+<equipos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:noNamespaceSchemaLocation="examen_final.xsd">
+    <equipo red_social="facebook">
+        <nombre_equipo>Dream Team</nombre_equipo>
+        <Tipo_trabajo>Equipo de Futbol sala</Tipo_trabajo>
+        <followers>10000</followers>
+        <competiciones fechaCompeticion="2016-09-15">
+            <competicion>
+                <liga>Amateur</liga>
+            </competicion>
+            <competicion>
+                <champions>Europaleague</champions>
+            </competicion>
+        </competiciones>
+        <logros>
+            <año id="2015">
+                <exitos>15</exitos>
+                <fracasos>5</fracasos>
+            </año>
+            <año id="2016">
+                <exitos>11</exitos>
+                <fracasos>8</fracasos>
+            </año>   
+        </logros>
+        <jugadores>
+            <jugador>
+                <nombre>Joan</nombre>
+                <apellido>Ayza</apellido>
+                <cargo tipo="Delantero">
+                    <goles>16</goles>
+                    <asistencias>2</asistencias>
+                </cargo>
+                <fecha_nacimiento>1982-05-05</fecha_nacimiento>
+                <ruta_imagen tipo_imagen="gif">joan.gif</ruta_imagen>
+                <hora_ultimo_login>16:40:05</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-20</dia_ultimo_login>
+            </jugador>
+            <jugador>
+                <nombre>Albert</nombre>
+                <apellido>Rico</apellido>
+                <cargo tipo="Portero">
+                    <goles_encajados>16</goles_encajados>
+                    <paradas>26</paradas>
+                </cargo>
+                <fecha_nacimiento>1982-10-25</fecha_nacimiento>
+                <ruta_imagen tipo_imagen="jpg">rico.jpg</ruta_imagen>
+                <hora_ultimo_login>22:35:12</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-25</dia_ultimo_login>
+            </jugador>
+            <jugador>
+                <nombre>Juan</nombre>
+                <apellido>Ruz</apellido>
+                <cargo tipo="Defensa">
+                    <robos_balon>22</robos_balon>
+                    <entradas>2</entradas>
+                </cargo>
+                <fecha_nacimiento>1987-12-03</fecha_nacimiento>
+                <ruta_imagen tipo_imagen="png">ruz.png</ruta_imagen>
+                <hora_ultimo_login>09:25:36</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-24</dia_ultimo_login>
+            </jugador>
+            <jugador>
+                <nombre>Oriol</nombre>
+                <apellido>Galan</apellido>
+                <cargo tipo="Defensa">
+                    <robos_balon>36</robos_balon>
+                    <entradas>12</entradas>
+                </cargo>
+                <fecha_nacimiento>1982-06-11</fecha_nacimiento>
+                <ruta_imagen tipo_imagen="jpg">logo.jpg</ruta_imagen>
+                <hora_ultimo_login>11:40:59</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-21</dia_ultimo_login>
+            </jugador>
+            <jugador>
+                <nombre>Cristian</nombre>
+                <apellido>Siles</apellido>
+                <cargo tipo="Delantero">
+                    <goles>20</goles>
+                    <asistencias>13</asistencias>
+                </cargo>
+                <fecha_nacimiento>1992-05-20</fecha_nacimiento>
+                <ruta_imagen tipo_imagen="jpg">siles.jpg</ruta_imagen>
+                <hora_ultimo_login>21:05:02</hora_ultimo_login>
+                <dia_ultimo_login>2017-05-25</dia_ultimo_login>
+            </jugador>
+        </jugadores>
+    </equipo>
+</equipos>
