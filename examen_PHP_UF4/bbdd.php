@@ -5,7 +5,7 @@
  */
 
 function selectPlayByUser($usuario) {
-    $con = conectar();
+    $con = conectar("stugames");
     $select = "select tittle, genre, points, date from play join game on game=idgame where user='$usuario'";
     $resultado = mysqli_query($con, $select);
     desconectar($con);
@@ -13,7 +13,7 @@ function selectPlayByUser($usuario) {
 }
 
 function juegosNovotados($usuario){
-  $con = conectar();
+  $con = conectar("stugames");
     $select = "select tittle, genre, price from game";
     $resultado = mysqli_query($con, $select);
     desconectar($con);
@@ -21,7 +21,7 @@ function juegosNovotados($usuario){
 }
 
 function totalJuegos($usuario){
-    $conectar = conectar();
+    $conectar = conectar("stugames");
     $select = "select count(*) as 'total_game' from play where user='$usuario'";
     $resultado = mysqli_query($conectar, $select);
     $fila = mysqli_fetch_array($resultado);
@@ -31,7 +31,7 @@ function totalJuegos($usuario){
 }
 
 function mediaPuntuaciones($usuario){
-    $con = conectar();
+    $con = conectar("stugames");
     $select = "select avg(points) from play where user='$usuario'";
     $resultado = mysqli_query($con, $select);
     desconectar($con);
@@ -39,7 +39,7 @@ function mediaPuntuaciones($usuario){
 }
 
 function insertUser($usuario, $passcif, $name, $edad) {
-    $conexion = conectar();
+    $conexion = conectar("stugames");
     $insert = "insert into user values ('$usuario', '$passcif', '$name', $edad)";
     if (mysqli_query($conexion, $insert)) {
         $msg = "ok";
@@ -51,16 +51,22 @@ function insertUser($usuario, $passcif, $name, $edad) {
     return $msg;
 }
 
-function loginUser($username, $pass) {
-    $con = conectar();
-    $query = "select pass from user where username='$username' and pass='$pass'";
+function loginUser($username, $password) {
+    $con = conectar("stugames");
+    $query = "select pass from user where username='$username'";
     echo $query;
     $resultado = mysqli_query($con, $query);
     $filas = mysqli_num_rows($resultado);
     desconectar($con);
-    return ($filas > 0);
+    if($filas>0){
+        $fila = mysqli_fetch_array($resultado);
+        extract($fila);
+        return password_verify($password, $pass);
+    }
+    else{
+        return false;
+    }
 }
-
 function conectar() {
     $con = mysqli_connect("localhost", "root", "", "stugames")
             or die("No se ha podido conectar con la BBDD.");
@@ -68,7 +74,7 @@ function conectar() {
 }
 
 function elegirJuego($game){
-    $conectar = conectar("msg");
+    $conectar = conectar("stugames");
     $select = "select * from play where game!='$game'";
     $resultado = mysqli_query($conectar, $select);
     desconectar($conectar);

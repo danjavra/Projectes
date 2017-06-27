@@ -18,6 +18,9 @@
         session_start();
         require_once 'bbdd.php';
         if (isset($_POST["login"])) {
+            $passwordcif = password_hash($_POST["pass"], PASSWORD_DEFAULT);
+            $passwordVerify = password_verify($_POST["pass"],$passwordcif);
+            
             if (loginUser($_POST["usuario"], $_POST["pass"])) {
                 $_SESSION["user"] = $_POST["usuario"];
                 header("Location: user.php");
